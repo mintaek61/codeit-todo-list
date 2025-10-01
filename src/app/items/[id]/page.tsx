@@ -58,7 +58,7 @@ export default function TodoDetailPage({ params }: TodoDetailPageProps) {
     <div className="min-h-screen bg-gray-50">
       {/* 헤더 */}
       <header className="bg-white shadow-sm border-b">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <Link
             href="/"
             className="flex items-center gap-2 text-xl sm:text-2xl font-bold text-violet-600 hover:text-violet-700 transition-colors"
@@ -66,9 +66,13 @@ export default function TodoDetailPage({ params }: TodoDetailPageProps) {
             <img
               src="/images/Size=Small.svg"
               alt="로고"
-              className="w-16 h-16 sm:w-16 sm:h-16"
+              className="h-10 w-auto sm:hidden"
             />
-            <span className="hidden sm:inline">do it:</span>
+            <img
+              src="/images/Size=Large.svg"
+              alt="로고"
+              className="h-10 w-auto hidden sm:block"
+            />
           </Link>
         </div>
       </header>
