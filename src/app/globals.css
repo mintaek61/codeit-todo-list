@@ -3,6 +3,29 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* 피그마 디자인 기반 컬러 시스템 */
+  --slate-900: #0f172a;
+  --slate-800: #1e293b;
+  --slate-500: #647488;
+  --slate-400: #94a3b8;
+  --slate-300: #cbd5e1;
+  --slate-200: #e2ebfd;
+  --slate-100: #f1f5f9;
+
+  --violet-600: #7c3aed;
+  --violet-100: #EDEOFE;
+  --rose-500: #F43FSE;
+  --lime-300: #bef254;
+  --amber-800: #92400e;
+
+  /* 기존 컬러 시스템 */
+  --primary: #7c3aed;
+  --primary-dark: #6d28d9;
+  --secondary: #647488;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
 }
 
 @theme inline {
@@ -10,6 +33,29 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* 피그마 디자인 컬러 팔레트 */
+  --color-slate-900: var(--slate-900);
+  --color-slate-800: var(--slate-800);
+  --color-slate-500: var(--slate-500);
+  --color-slate-400: var(--slate-400);
+  --color-slate-300: var(--slate-300);
+  --color-slate-200: var(--slate-200);
+  --color-slate-100: var(--slate-100);
+
+  --color-violet-600: var(--violet-600);
+  --color-violet-100: var(--violet-100);
+  --color-rose-500: var(--rose-500);
+  --color-lime-300: var(--lime-300);
+  --color-amber-800: var(--amber-800);
+
+  /* 기존 컬러 팔레트 */
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +69,29 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 커스텀 스크롤바 스타일 */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #fde68a; /* amber-200 */
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #fcd34d; /* amber-300 */
+}
+
+/* 메모 영역 포커스 스타일 강제 적용 */
+.memo-textarea:focus {
+  border-color: #fcd34d !important; /* amber-300 */
+  outline: none !important;
+  box-shadow: none !important;
 }
